@@ -5,11 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite Skins</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: navLinkFade 1s ease forwards;
+        }
+
+        nav a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        nav a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        nav a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        nav a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        nav a:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        nav a:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .skin-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skin-card {
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInCard 0.5s ease forwards;
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .skin-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .skin-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #4e4e4e;
+        }
+
+        .skin-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .skin-card p {
+            font-size: 0.9rem;
+            margin: 0 10px 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Fortnite Skins</h1>
-        <p>Die besten und beliebtesten Skins aus Fortnite!</p>
     </header>
 
     <nav>
@@ -18,34 +165,37 @@
         <a href="spielmodi.html">Spielmodi</a>
         <a href="kreativmaps.html">Kreativmaps</a>
         <a href="weiterentwicklung.html">Weiterentwicklung</a>
-        <a href="news.html">News (Beta)</a>
+        <a href="news.html">News</a>
+        <a href="community.html">Community</a>
     </nav>
 
-    <main>
-        <h2>Unsere Top-Skins</h2>
+    <div class="main-content">
+        <h2>Unsere Lieblings-Skins</h2>
         <div class="skins-grid">
-            <div class="skin-card">
-                <img src="skin1.jpg" alt="Skin 1">
-                <h3>Dunkler Ritter</h3>
-                <p>Einer der altesten Skins.</p>
-            </div>
-            <div class="skin-card">
-                <img src="skin2.jpg" alt="Skin 2">
-                <h3>Drift</h3>
-                <p>Stilvoller Skin mit anpassbaren Stufen.</p>
-            </div>
-            <div class="skin-card">
-                <img src="skin3.jpg" alt="Skin 3">
-                <h3>Peely</h3>
-                <p>Der kultige Bananen-Skin von Fortnite.</p>
-            </div>
-            <div class="skin-card">
-                <img src="skin4.jpg" alt="Skin 4">
-                <h3>Midas</h3>
-                <p>Der Mann mit dem goldenen Touch.</p>
-            </div>
+    <div class="skin-card">
+        <img src="skin1.jpg" alt="Renegade Raider">
+        <h3>Renegade Raider</h3>
+        <p>Ein seltener und begehrter OG-Skin.</p>
+    </div>
+    <div class="skin-card">
+        <img src="skin2.jpg" alt="Drift">
+        <h3>Drift</h3>
+        <p>Ein legendärer Skin aus Kapitel 1.</p>
+    </div>
+    <div class="skin-card">
+        <img src="skin3.jpg" alt="Peely">
+        <h3>Peely</h3>
+        <p>Die ikonische Banane von Fortnite.</p>
+    </div>
+	<div class="skin-card">
+        <img src="skin4.jpg" alt="Dunkler Ritter">
+        <h3>Dunkler Ritter</h3>
+        <p>Einer der begertesten Skins.</p>
+    </div>
+</div>
+
         </div>
-    </main>
+    </div>
 
     <footer>
         <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.</p>

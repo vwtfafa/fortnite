@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortnite - Die ultimative Fan-Website</title>
+    <title>Fortnite Fan-Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Willkommen in der Welt von Fortnite v.0.3 beta</h1>
-        <p>Entdecke alles über Fortnite: Kreativmaps, beliebte Skins und mehr!</p>
+        <div class="header-content">
+            <h1>Fortnite Fan-Website</h1>
+            <p>Dein ultimativer Guide für Skins, News, Spielmodi und mehr! Beta 0.4 </p>
+        </div>
     </header>
 
     <nav>
@@ -18,50 +20,54 @@
         <a href="spielmodi.html">Spielmodi</a>
         <a href="kreativmaps.html">Kreativmaps</a>
         <a href="weiterentwicklung.html">Weiterentwicklung</a>
-        <a href="news.html">News (Beta)</a>
-	</nav>
+        <a href="news.html">News</a>
+        <a href="community.html">Community</a>
+    </nav>
 
     <main>
-        <section>
-            <h2>Was ist Fortnite?</h2>
-            <p>Fortnite ist ein Online-Spiel, das von Epic Games entwickelt wurde. Es verbindet spannendes Gameplay mit kreativen Elementen und hat Millionen von Spielern weltweit begeistert.</p>
-            <img src="fortnite_intro.jpg" alt="Fortnite Action">
+        <section class="news-section">
+            <h2>Neuigkeiten</h2>
+            <div class="news-grid">
+                <!-- Kurz und knapp, ohne detaillierte Beschreibung -->
+                <div class="news-card">
+                    <img src="news1.jpg" alt="News 1">
+                    <h3>Update v26 ist da!</h3>
+                </div>
+                <div class="news-card">
+                    <img src="news2.jpg" alt="News 2">
+                    <h3>Neues Turnier angekündigt</h3>
+                </div>
+                <div class="news-card">
+                    <img src="news3.jpg" alt="News 3">
+                    <h3>OG modus veröffentlicht</h3>
+                </div>
+            </div>
         </section>
 
-        <section class="highlight">
-            <h2>Highlights von Fortnite</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3>Epische Skins</h3>
-                    <p>Erlebe die besten Outfits und Anpassungen, die Fortnite zu bieten hat.</p>
-                    <a href="skins.html">Mehr erfahren</a>
+        <section class="kreativmaps-section">
+            <h2>Kreativmaps</h2>
+            <div class="map-grid">
+                <div class="map-card">
+                    <img src="map1.jpg" alt="Map 1">
+                    <h3>Parkour Paradise</h3>
+                    <p>Teste deine Fähigkeiten auf dieser Parkour-Map.</p>
                 </div>
-                <div class="grid-item">
-                    <h3>Beliebte Spielmodi</h3>
-                    <p>Entdecke spannende Modi wie Battle Royale und den Kreativmodus.</p>
-                    <a href="spielmodi.html">Mehr erfahren</a>
+                <div class="map-card">
+                    <img src="map2.jpg" alt="Map 2">
+                    <h3>Battle Zone</h3>
+                    <p>Erlebe intensive Gefechte in einer speziellen Arena.</p>
                 </div>
-                <div class="grid-item">
-                    <h3>Kreativmaps</h3>
-                    <p>Spiele auf einzigartigen Karten, die von der Community erstellt wurden.</p>
-                    <a href="kreativmaps.html">Mehr erfahren</a>
-                </div>
-                <div class="grid-item">
-                    <h3>Fortschritte</h3>
-                    <p>Erfahre, wie Fortnite sich im Laufe der Jahre weiterentwickelt hat.</p>
-                    <a href="weiterentwicklung.html">Mehr erfahren</a>
-                </div>
-				<div class="grid-item">
-                    <h3>News (Beta)</h3>
-                    <p>Neuste Nachichten zum spiel.<p>
-                    <a href="news.html">Mehr erfahren</a>
+                <div class="map-card">
+                    <img src="map3.jpg" alt="Map 3">
+                    <h3>Escape Room</h3>
+                    <p>Schaffst du es, die Rätsel zu lösen?</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.Website von vwtfafa auf allen platformen</p>
+        <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.</p>
         <p class="coming-soon">Bald kommt mehr!</p>
     </footer>
 </body>

@@ -5,11 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite News</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: navLinkFade 1s ease forwards;
+        }
+
+        nav a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        nav a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        nav a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        nav a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        nav a:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        nav a:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .news-container {
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .news-card {
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInCard 0.5s ease forwards;
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #4e4e4e;
+        }
+
+        .news-card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .news-card p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Fortnite News</h1>
-        <p>Neuste nachichten!</p>
     </header>
 
     <nav>
@@ -18,45 +169,37 @@
         <a href="spielmodi.html">Spielmodi</a>
         <a href="kreativmaps.html">Kreativmaps</a>
         <a href="weiterentwicklung.html">Weiterentwicklung</a>
-        <a href="news.html">News (Beta)</a>
+        <a href="news.html">News</a>
+        <a href="community.html">Community</a>
     </nav>
 
-    <main>
-        <h2>Unsere Top-News</h2>
-        <div class="skins-grid">
-            <div class="skin-card">
-                <img src="news1.jpg" alt="News 1">
-                <h3>Das Neue Movement in Fortnite</h3>
-                <p>Abseilen: Am Abgrund springen, um weiter zu kommen.</p>
-				<p>Rollende Landung: Beim Fallen kurz vor dem Aufprall springen, um eine Rolle zu machen und etwas Ausdauer zu regenerieren.</p>
-				<p>Wandsprung: An eine vertikale Wand springen, um in eine bestimmte Richtung abzuspringen.</p>
-				<p>Wandklettern: An eine vertikale Wand vor einem springen, um hochzuklettern.</p>
-            </div>
-            <div class="skin-card">
-                <img src="news2.jpg" alt="News 2">
-                <h3>Chapter 6 Bosse</h3>
-                <p>Auf der Fortnite Chapter 6 Map sind zwei neue Bosse verteilt: Shogun X und Nachtrose. Wenn ihr diese besiegt, erhaltet ihr ein Medaillon mit einer besonderen Fähigkeit. Der Wanderer-Medaillon von Shogun X verleiht euch unendlich viel Ausdauer und Unsichtbarkeit beim Sprinten. Das Nachtrose-Medaillon sorgt dafür, dass eure Waffe automatisch nachlädt. So sieht der „Shogun X“-Boss aus</p>
-            </div>
-            <div class="skin-card">
-                <img src="news3.jpg" alt="News 3">
-                <h3>Neue Waffen</h3>
-                <p>Das sind die neuen waffen in chapter 6.
-				Holo-Tornado-Sturmgewehr,
-Zorn-Sturmgewehr,
-Tarnpräzision-Maschinenpistole,
-Feuerflut-Maschinenpistole,
-Wächter-Pumpgun,
-automatische Doppelschuss-Schrotflinte,
-Oni-Schrotflinte und
-Taifunklinge.</p>
-            </div>
-            <div class="skin-card">
-                <img src="news4.jpg" alt="News 4">
-                <h3>Soon</h3>
-                <p>Soon</p>
-            </div>
-        </div>
-    </main>
+<div class="news-grid">
+    <!-- News-Beitrag 1 -->
+    <div class="news-card">
+            <img src="news1.jpg" alt="Update v26">
+            <h3>Update v26: Neue Features</h3>
+            <p>Erfahre alles über das neueste Update in Fortnite.</p>
+        </a>
+    </div>
+
+    <!-- News-Beitrag 2 -->
+    <div class="news-card">
+            <img src="news2.jpg" alt="Neues Turnier">
+            <h3>Neues Turnier angekündigt</h3>
+            <p>Fortnite kündigt das nächste große Esports-Turnier an.</p>
+        </a>
+    </div>
+
+    <!-- News-Beitrag 3 -->
+    <div class="news-card">
+            <img src="news3.jpg" alt="Patchnotes">
+            <h3>OG modus: Was ist neu?</h3>
+            <p>Hier sind alle Details zu den Änderungen im neuen modus.</p>
+        </a>
+    </div>
+</div>
+
+
 
     <footer>
         <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.</p>

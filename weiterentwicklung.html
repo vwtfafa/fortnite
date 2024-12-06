@@ -5,11 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite Weiterentwicklung</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: navLinkFade 1s ease forwards;
+        }
+
+        nav a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        nav a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        nav a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        nav a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        nav a:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        nav a:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .weiterentwicklung-container {
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .weiterentwicklung-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .weiterentwicklung-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .weiterentwicklung-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Die Weiterentwicklung von Fortnite</h1>
-        <p>Wie Fortnite über die Jahre gewachsen ist.</p>
+        <h1>Fortnite Weiterentwicklung</h1>
     </header>
 
     <nav>
@@ -18,19 +139,26 @@
         <a href="spielmodi.html">Spielmodi</a>
         <a href="kreativmaps.html">Kreativmaps</a>
         <a href="weiterentwicklung.html">Weiterentwicklung</a>
-        <a href="news.html">News (Beta)</a>
+        <a href="news.html">News</a>
+        <a href="community.html">Community</a>
     </nav>
 
-    <main>
-        <h2>Technische Verbesserungen</h2>
-        <p>Fortnite hat mit jeder neuen Season Grafik- und Gameplay-Upgrades erhalten, darunter die Einführung von Unreal Engine 5.</p>
-
-        <h2>Partnerschaften</h2>
-        <p>Die Zusammenarbeit mit Marken wie Marvel, DC, und Star Wars hat Fortnite weltweit bekannt gemacht.</p>
-    </main>
+    <div class="weiterentwicklung-container">
+        <h2>Wie Fortnite sich weiterentwickelt</h2>
+        <div class="weiterentwicklung-content">
+            <img src="entwicklungsbild1.jpg" class="weiterentwicklung-img" alt="Entwicklung">
+            <p class="weiterentwicklung-text">
+                Fortnite hat sich im Laufe der Jahre stark verändert und neue Features eingeführt. Diese Veränderungen umfassen nicht nur neue Waffen, Karten und Spielmodi, sondern auch die Verbesserung der Spielmechaniken, Grafik und Performance.
+            </p>
+            <img src="entwicklungsbild2.jpg" class="weiterentwicklung-img" alt="Entwicklung">
+            <p class="weiterentwicklung-text">
+                Das Ziel ist es, die Spielererfahrung kontinuierlich zu verbessern und neue innovative Features einzuführen, um das Spiel frisch und spannend zu halten.
+            </p>
+        </div>
+    </div>
 
     <footer>
-        <p>© 2024 Fortnite Fan-Website.</p>
+        <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.</p>
     </footer>
 </body>
 </html>

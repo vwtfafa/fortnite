@@ -3,13 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beliebte Spielmodi</title>
+    <title>Fortnite Spielmodi</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: navLinkFade 1s ease forwards;
+        }
+
+        nav a:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        nav a:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        nav a:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        nav a:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        nav a:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        nav a:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .spielmodi-container {
+            text-align: center;
+            margin-top: 50px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .spielmodi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .spielmodi-card {
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInCard 0.5s ease forwards;
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .spielmodi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .spielmodi-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #4e4e4e;
+        }
+
+        .spielmodi-card h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .spielmodi-card p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Beliebte Spielmodi</h1>
-        <p>Entdecke die verschiedenen Arten, Fortnite zu spielen!</p>
+        <h1>Fortnite Spielmodi</h1>
     </header>
 
     <nav>
@@ -18,32 +169,34 @@
         <a href="spielmodi.html">Spielmodi</a>
         <a href="kreativmaps.html">Kreativmaps</a>
         <a href="weiterentwicklung.html">Weiterentwicklung</a>
-        <a href="news.html">News (Beta)</a>
+        <a href="news.html">News</a>
+        <a href="community.html">Community</a>
     </nav>
 
-    <main>
-        <h2>Übersicht der Modi</h2>
-        <ul>
-            <li>
+    <div class="spielmodi-container">
+        <h2>Beliebte Fortnite Spielmodi</h2>
+        <div class="spielmodi-grid">
+            <div class="spielmodi-card">
+                <img src="battle-royale.jpg" alt="Battle Royale">
                 <h3>Battle Royale</h3>
-                <p>Der klassische Modus: 100 Spieler kämpfen um den Sieg.</p>
-                <img src="battle_royale.jpg" alt="Battle Royale Modus">
-            </li>
-            <li>
+                <p>Der klassische Überlebensmodus, in dem du gegen 99 andere Spieler kämpfst.</p>
+            </div>
+            <div class="spielmodi-card">
+                <img src="team-rumble.jpg" alt="Team Rumble">
+                <h3>Team Rumble</h3>
+                <p>Ein 50vs50-Modus, bei dem du mit deinem Team kämpfst und Punkte sammelst.</p>
+            </div>
+            <div class="spielmodi-card">
+                <img src="creative.jpg" alt="Kreativ">
                 <h3>Kreativmodus</h3>
-                <p>Erstelle deine eigenen Welten und Minispiele mit unbegrenzten Möglichkeiten.</p>
-                <img src="creative_mode.jpg" alt="Bald mit bild :)">
-            </li>
-            <li>
-                <h3>Rette die Welt</h3>
-                <p>Ein Koop-Modus, in dem du gegen Zombies kämpfst und Basen baust.</p>
-                <img src="save_the_world.jpg" alt="Rette die Welt Modus">
-            </li>
-        </ul>
-    </main>
+                <p>Baue und gestalte deine eigenen Karten und Spiele mit Freunden.</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        © 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.
+        <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.</p>
+        <p class="coming-soon">Bald kommt mehr!</p>
     </footer>
 </body>
 </html>

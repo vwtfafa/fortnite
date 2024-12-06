@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortnite Kreativmaps</title>
+    <title>Fortnite Community</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -91,7 +91,7 @@
             }
         }
 
-        .kreativmaps-container {
+        .community-container {
             text-align: center;
             margin-top: 50px;
             animation: fadeInUp 1.5s ease-out;
@@ -108,20 +108,13 @@
             }
         }
 
-        .kreativmaps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-        }
-
-        .kreativmaps-card {
+        .video-card {
             background-color: #1e1e1e;
             color: #fff;
             text-align: center;
             border-radius: 10px;
             padding: 20px;
+            margin: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
             animation: fadeInCard 0.5s ease forwards;
@@ -136,31 +129,22 @@
             }
         }
 
-        .kreativmaps-card:hover {
+        .community-video {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .community-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .kreativmaps-card img {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid #4e4e4e;
-        }
-
-        .kreativmaps-card h3 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-
-        .kreativmaps-card p {
-            font-size: 1rem;
-            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Fortnite Kreativmaps</h1>
+        <h1>Fortnite Community Videos</h1>
     </header>
 
     <nav>
@@ -173,30 +157,26 @@
         <a href="community.html">Community</a>
     </nav>
 
-    <div class="kreativmaps-container">
-        <h2>Unsere besten Kreativmaps</h2>
-        <div class="kreativmaps-grid">
-            <div class="kreativmaps-card">
-                <img src="map1.jpg" alt="Map 1">
-                <h3>Parkour Challenge</h3>
-                <p>Eine spannende Parkour-Herausforderung, die deine Fähigkeiten auf die Probe stellt.</p>
+    <div class="community-container">
+        <h2>Neue Fortnite Community Videos</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <iframe class="community-video" src="https://www.youtube.com/watch?v=qdtAcJUf0E0" frameborder="0" allowfullscreen></iframe>
+                <h3>Fortnite Gameplay</h3>
             </div>
-            <div class="kreativmaps-card">
-                <img src="map2.jpg" alt="Map 2">
-                <h3>Deathrun</h3>
-                <p>Ein Deathrun-Kurs, der schnelle Reflexe erfordert.</p>
+            <div class="video-card">
+                <iframe class="community-video" src="https://www.youtube.com/watch?v=RoeCDX2t7TA" frameborder="0" allowfullscreen></iframe>
+                <h3>Top Fortnite Moments</h3>
             </div>
-            <div class="kreativmaps-card">
-                <img src="map3.jpg" alt="Map 3">
-                <h3>Escape Room</h3>
-                <p>Suche den weg raus.</p>
+            <div class="video-card">
+                <iframe class="community-video" src="https://www.youtube.com/watch?v=mEGdvXQySQE" frameborder="0" allowfullscreen></iframe>
+                <h3>Fortnite OG modus</h3>
             </div>
         </div>
     </div>
 
     <footer>
         <p>© 2024 Fortnite Fan-Website. Erstellt für ein Schulprojekt.</p>
-        <p class="coming-soon">Bald kommt mehr!</p>
     </footer>
 </body>
 </html>
